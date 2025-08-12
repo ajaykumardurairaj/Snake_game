@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Friends Snake — PWA</title>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2C3E50"/>
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <h1>Friends Snake</h1>
+    <div class="controls">
+      <button id="muteBtn" title="Mute / Unmute">🔊</button>
+      <button id="pauseBtn" title="Pause / Resume">⏸️</button>
+      <button id="installBtn" class="hidden">Install</button>
+    </div>
+  </header>
+
+  <main class="game-area">
+    <canvas id="gameCanvas" width="480" height="640"></canvas>
+    <div class="hud">
+      <div id="score">Score: 0</div>
+      <div id="status">Speed: 1x</div>
+    </div>
+    <div class="mobile-controls">
+      <button data-dir="up">▲</button>
+      <div class="middle">
+        <button data-dir="left">◀</button>
+        <button data-dir="right">▶</button>
+      </div>
+      <button data-dir="down">▼</button>
+    </div>
+    <aside class="legend">
+      <h3>Power-ups</h3>
+      <ul>
+        <li><span class="pu size"></span> +Length</li>
+        <li><span class="pu shield"></span> Shield</li>
+        <li><span class="pu speed"></span> Speed Boost</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>Play with your friends — choose avatars and try to beat each other!</p>
+    <p class="small">This is a demo PWA (offline-capable). Built with ❤️.</p>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
